@@ -3,7 +3,8 @@ from prettytable import PrettyTable
 
 def connect_to_database():
     """Si connette a MongoDB Atlas e restituisce il database e il client."""
-    MONGO_URI = "mongodb+srv://NuovoUtenteProva:passwordProva@cluster0.ah74a.mongodb.net/?retryWrites=true&w=majority"
+    """la stringa MONGO_URI si ottine nella sezione Connect di MongoDB Atlas. il nome del cluster sarà già inserito. nome e utente andranno inseriti manualmente."""
+    MONGO_URI = "mongodb+srv://<db_username>:<db_password>@<db_cluster_name>/?retryWrites=true&w=majority"
     client = MongoClient(MONGO_URI)
     db = client["serieTV"]  
     return db, client 
