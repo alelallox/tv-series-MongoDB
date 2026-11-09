@@ -30,7 +30,7 @@ def add_serie(db, titolo, voto):
     return result.inserted_id
 
 db, client = connect_to_database() 
-print("Connessione aperta con MongoDB ✅")
+print("Connessione aperta con MongoDB")
 
 while True:
     key = input("Inserisci una serie tv o digita un comando: ")
@@ -54,9 +54,9 @@ while True:
         else:
             result = db["serieTV"].delete_one({"titolo": titolo_da_eliminare})
             if result.deleted_count > 0:
-                print(f"La serie '{titolo_da_eliminare}' è stata eliminata con successo! ✅")
+                print(f"La serie '{titolo_da_eliminare}' è stata eliminata con successo!")
             else:
-                print(f"Nessuna serie trovata con il titolo '{titolo_da_eliminare}'. ❌")
+                print(f"Nessuna serie trovata con il titolo '{titolo_da_eliminare}'.")
 
     elif key == "pop tot":
         result = db["serieTV"].delete_many({})
@@ -64,13 +64,13 @@ while True:
     
     elif key == "end":
         client.close()  
-        print("Connessione chiusa con MongoDB ✅")
+        print("Connessione chiusa con MongoDB")
         break
 
     else:
         try:
             voto = float(input("Voto: "))  
             add_serie(db, key, voto)
-            print(f"Serie '{key}' aggiunta con voto {voto} ✅")
+            print(f"Serie '{key}' aggiunta con voto {voto}")
         except ValueError:
             print("Errore: il voto deve essere un numero valido.")
