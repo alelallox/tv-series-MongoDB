@@ -1,13 +1,11 @@
 # tv-series-MongoDB
-AGGIORNAMENTO DEL VECCHIO PROGRAMMA DI MEMORIZZAZIONE DELLE SERIE TV. Ora salviamo le serie tv su un database con MongoDB invece che 
-Un semplice script Python da riga di comando per gestire e tracciare le tue serie TV preferite. Il programma si connette a un database cloud **MongoDB Atlas** e permette di salvare, visualizzare ed eliminare i titoli con i relativi voti.
+AGGIORNAMENTO DEL VECCHIO PROGRAMMA DI MEMORIZZAZIONE DELLE SERIE TV. Ora salviamo le serie tv su un database con MongoDB invece che salvare un dizionario (serie tv - voto) su disco utilizzando il modulo Pickle.
 
 ## Caratteristiche
-
-* 📝 **Aggiunta Rapida**: Inserisci il nome di una serie e assegna un voto numerico.
-* 🔢 **ID Auto-incrementanti**: Gestione automatica e sequenziale degli ID per ogni documento.
-* 📊 **Visualizzazione Ordinata**: Stampa una tabella formattata delle serie TV, ordinate dal voto più alto al più basso.
-* ❌ **Rimozione Flessibile**: Elimina una serie specifica tramite il suo titolo o il suo ID, oppure svuota l'intero database.
+* **Aggiunta Rapida**: Inserisci il nome di una serie e assegna un voto numerico.
+* **ID Auto-incrementanti**: Gestione automatica e sequenziale degli ID per ogni documento.
+* **Visualizzazione Ordinata**: Stampa una tabella formattata delle serie TV, ordinate dal voto più alto al più basso.
+* **Rimozione Flessibile**: Elimina una serie specifica tramite il suo titolo o il suo ID, oppure svuota l'intero database.
 
 ## Configurazione
 
